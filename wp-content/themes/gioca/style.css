@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/*Theme Name: Gioca
+
+Theme URI: http://www.bewebfactory.com
+Author: Be Web Factory
+Author URI: http://www.bewebfactory.com
+Description: Le thème de Gioca
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*//* ------------------------------ RESET ------------------------------ */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	outline:none;
+	font-size:1em;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* ------------------------------ END RESET ------------------------------ */
+
+/* ------------------------------ GLOBAL ------------------------------ */
+
+@font-face {
+ font-family: "Elliot";
+ src: url("fonts/FSElliotWeb-Light.woff2") format("woff2"),
+        url("fonts/FSElliotWeb-Light.woff") format("woff");
+}
+body {
+	font-family: 'Elliot',Helvetica, Arial, sans-serif;
+    font-weight:100;
+	font-size:1em;
+	line-height:1.2em;
+	margin:0;
+	max-width:100%;
+	-webkit-text-size-adjust: none;
+	position:relative;
+}
+img {max-width:100%;height:auto;display: block;}
+a img {border:0;}
+a {color:#000;}
+
+.hide, .mobile {display: none !important;}
+
+.clear {clear:both;}
+
+strong {font-weight:700;}
+
+header {
+    position: fixed;
+    width:100%;
+    z-index:800;
+}
+header a {color:#000;font-size:1em;text-decoration: none;}
+header .left a {font-size:1.1em;}
+
+.left, .right, .gauche, .droite {float:left;width:50%;padding:20px 10px; box-sizing: border-box;}
+.left {padding:20px 20px 20px 60px;}
+.right {float:right;text-align: right;}
+.gauche {padding-left:0;}
+.droite {float:right;}
+
+.menu {margin:0 0 5px 0;padding:0;list-style-type: none;}
+
+#index {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    width:50px;
+    height:100%;
+    background: #FFF;
+    z-index:1000;
+    text-align: right;
+}
+#index span {
+    display: block;
+    color:#000;
+    cursor: pointer;
+    font-size:1.8em;
+    margin:56px 0 0 14px;
+    width:22px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+#index i {
+    position:absolute;
+    bottom:20px;
+    left:17px;
+    webkit-transition: all 0.3s ease;
+	moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+section {
+    position: relative;
+    min-height:100vh;
+    height:auto;
+    width:100%;
+    padding:50px 70px 50px 120px;
+    box-sizing: border-box;
+}
+.centrer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#textes {
+    display: block;
+    position:fixed;
+    z-index:901;    
+    top:0;
+    right:100%;
+    background: #FFF;
+    webkit-transition: all 0.3s ease;
+	moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+    border-left:100px solid #ea5046;
+    padding-left:0px;
+    overflow: visible;
+}
+.open {right:0 !important;}
+
+#textes ul {list-style-type: none;margin:0 0 0 -25px;padding:0;float:left;width:20%;}
+#textes ul li {margin-bottom:8px;}
+#textes ul li:last-child {position:absolute;bottom:50px;}
+#textes ul a {color:#000;text-decoration: none;font-size:1.1em;}
+#textes ul a:hover, #textes ul a.active {font-weight:700;}
+
+.texte {
+    float:right;
+    width:80%;
+    display: none;
+    webkit-transition: all 0.3s ease;
+	moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.texte h3 {
+    margin:0px;
+    font-size:1.4em;
+    line-height:1.4em;
+    color:#ea5046;
+}
+.texte p {
+    margin-top:0px;
+    font-size:1.4em;
+    line-height:1.4em;
+}
+
+.actif {display:block;}
+
+
+section:nth-child(even) {background: #ea5046;}
+section:nth-child(even) h3 {color: #fff;}
+section:nth-child(odd) h3 {color: #ea5046;}
+
+.rouge {color:#ea5046;}
+.blanc {color:#FFF;}
+
+h1 {
+    font-size:7.5em;
+    line-height:1.2em;;
+    margin:0 0 0 -5px;
+    color:#FFF;
+    font-weight:100;
+}
+h2 {
+    font-size:4em;
+    line-height:1em;
+    margin:0;
+    font-weight:100;
+}
+/*#home h2 {
+    font-size:3.2em;
+}*/
+#home img {width:300px;height:auto;}
+
+h3, .droite p, #contact p {    
+    font-size:1.3em;
+    line-height: 1.2em;
+    margin:15px 0 5px 0;
+    font-weight:100;
+}
+.droite p {margin: 0 0 20px 0 ;}
+
+#contact p {    
+    font-size:1.4em;
+    line-height: 1.4em;
+}
+
+/* ------------------------------  SLIDESHOW -----------------------------*/
+
+i {font-size: 30px !important;color:#000;}
+
+#slide_nav {z-index:900;}
+#slide_nav a {text-decoration: none;}
+#slide_nav a:hover span {text-decoration: underline;}
+#prev, #next {position:absolute;bottom:35px;}
+#prev {left:70px;}
+#next {right:20px;}
+#slide_nav span {display: inline-block;vertical-align: super;}
+
+.slide {width:100%;}
+
+/*.citation {font-size:1.2em;}*/
+
+.credits p, .credits h3 {font-size:1em;}
+
+.citation h3 {margin:0 0 15px 0;}
+.credits h3 {margin:35px 0 0 0;}
+
+.credits a {color:#FFF;}
+.credits a:hover {text-decoration: none;}
+
+.references {margin-bottom:35px;}
+
+/* ------------------------------  RESPONSIVE -----------------------------*/
+@media (max-width: 1000px) {
+    body {font-size:0.9em;}
+    h2 {font-size:3.5em;}
+}
+@media (max-width: 768px) {
+    h2 {font-size:3em;}
+}
+@media (max-width: 640px) {
+
+    #home img {width:240px;}
+
+    .left {padding:20px 20px 20px 50px;}
+    #index {width:30px;}
+    #textes { border-left:60px solid #ea5046;}
+    #textes ul li.clients {margin-top:20px;}
+    #textes ul {float:none;width:100%;margin:0 0 0 -15px;font-size:0.9em;}
+    #textes ul li {margin-bottom:5px;}
+    .texte {float:none;margin:20px 0 0 -15px;font-size:0.95em;width:auto;}
+    #index i {left:6px;}
+    #index span {margin:56px 0 0 7px;}
+    
+    section { padding:20px 20px 20px 50px;}
+    
+    .gauche, .droite {float:none;width:100%;padding:20px 0;}
+    
+    .references {margin-bottom:0px;}
+    
+    #slide_nav {position: relative;padding-top:35px;}
+    #prev {left:0px;}
+    #next {right:0px;}
+    
+    h1 {font-size:6em;}
+    h2 {font-size:2.5em;}
+    
+    #contact p {  font-size:1.5em;}
+
+    
+}
